@@ -1,0 +1,161 @@
+
+/* ===== GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+
+    background:
+        radial-gradient(ellipse at 5% 5%, #283d91 0%, transparent 35%),
+        radial-gradient(ellipse at 95% 95%, #46238a 0%, transparent 35%),
+        radial-gradient(ellipse at 50% 100%, #102f70 0%, transparent 45%),
+        linear-gradient(135deg, #080d20, #102047 50%, #0a0d27);
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+}
+
+/* ===== HEADING ===== */
+h1 {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #9be7ff,
+        #bca0ff,
+        #e4a0ff
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    filter: drop-shadow(0 0 20px #657cff35);
+}
+
+/* ===== RANDOM NUMBER DISPLAY ===== */
+#randomnum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 370px;
+    max-width: 85vw;
+    height: 220px;
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 5em;
+    font-weight: 700;
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff0c,
+        #ffffff05
+    );
+
+    border: 1px solid #587cff;
+    border-radius: 28px;
+
+    box-shadow:
+        0 0 25px #514cff25,
+        0 0 60px #704dff12,
+        inset 0 0 35px #ffffff08;
+
+    text-shadow:
+        0 0 12px #ffffff80,
+        0 0 35px #9d8aff60;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+/* ===== SPIN BUTTON ===== */
+#rollbtn {
+    padding: 16px 65px;
+    min-width: 190px;
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+
+    background: linear-gradient(
+        100deg,
+        #18bfff,
+        #365dff 50%,
+        #b52dff
+    );
+
+    border: 2px solid #8c8aff;
+    border-radius: 50px;
+
+    box-shadow:
+        0 0 20px #4e70ff70,
+        0 0 40px #743dff35;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+#rollbtn:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 0 25px #38cfff90,
+        0 0 50px #943dff75;
+}
+
+/* Button click effect */
+#rollbtn:active {
+    transform: scale(0.96);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 600px) {
+    .container {
+        gap: 28px;
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+        letter-spacing: -0.5px;
+    }
+
+    #randomnum {
+        width: 280px;
+        height: 170px;
+        font-size: 5em;
+    }
+
+    #rollbtn {
+        padding: 14px 48px;
+        font-size: 1.25rem;
+    }
+}
